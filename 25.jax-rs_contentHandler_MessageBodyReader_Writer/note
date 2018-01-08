@@ -1,0 +1,38 @@
+program:-Don't write transformation logic in Resource.
+
+flow:-
+-----
+isReadable method
+readFrom method
+from recharge
+isWriteable method
+from writerTo
+
+If we write tranformation logic in resouce then it's tightly coupled with
+business logic.
+
+Assume we want to change transformation logic xml to json then resource
+will be change so we use MessageBodyReader and MessageBodyWriter.
+
+send the xml:-by using ARC
+--------------------------
+<?xml version="1.0" encoding="utf-8"?>
+	<subscriber>
+		<mobile>9090909090</mobile>
+    	<plan>199</plan>
+    	<amount>199</amount>
+	</subscriber>
+	
+http://localhost:8001/25.jax-rs_contentHandler_MessageBodyReader_Writer/rest/idea/recharge	
+________________________________________________________________________________________________________________________
+
+Problem:-when client send the request the every time MessageBodyReader and MessageBodyWriter object will be created.
+
+Solution and another problem :- We can make as singlton of MessageBodyReader and MessageBodyWriter. 
+								But problem is every time JAXBContext object will be created.
+								
+								solution:-To resolve the problem of JAXBContext JAXBResolver came into picture.which is in next 
+								          program.
+								    
+Note:-Resource is not singleton.
+________________________________________________________________________      

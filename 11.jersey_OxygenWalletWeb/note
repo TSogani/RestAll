@@ -1,0 +1,27 @@
+getWalletBalance(GET)
+-----------
+http://localhost:8001/11.OxygenWalletWeb/resource/oxygen-ecash?walletId=1
+
+
+createWallet(POST)
+---------------
+http://localhost:8001/11.OxygenWalletWeb/resource/oxygen-ecash
+<?xml version="1.0" encoding="utf-8"?>
+<user>
+  <userName>dicky</userName>
+  <mobile>9694841386</mobile>
+  <email>dicky@gmail.com</email>
+</user>
+
+addMoney(PUT)
+-------------------
+<?xml version="1.0" encoding="utf-8"?>
+<addMoney>
+  <walletId>1</walletId>
+  <fromAccount>saving</fromAccount>  
+  <amount>99.99</amount>
+</addMoney>
+
+deActivateAccout(DELETE)
+-------------------------
+http://localhost:8001/11.OxygenWalletWeb/resource/oxygen-ecash?walletId=1

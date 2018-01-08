@@ -1,0 +1,69 @@
+jax-rs 1.0 will not support java automatic conversion type.
+
+jax-rs 2.0 will support java automatic conversion type.
+(1) primitive type conversion
+(2) Array,List,Set type conversion
+(3) can be any class given it has single type argument String constructor
+(4) can be any class given static valueOf(String) argument.
+________________________________________________________________________
+program:-1 
+
+(i)Integer conversion
+
+BankResource
+ApplicationInitializer
+
+method:-getCheckClearance
+
+http://localhost:8001/21.JavaAutomaticParamterConversionInRest/rest/bank/check-status/123
+------------------------------------------------------------------------------------------
+(ii) Array conversion(In RestEasy it will work but in jersey it will not work)
+	
+BankResource
+ApplicationInitializer
+
+method:-getJaipurCoustomerId
+
+http://localhost:9000/21.JavaAutomaticParamterConversionInRest/rest/bank/getJaipurCustomerId?customerId=123&customerId=124
+-------------------------------------------------------------------------------------------------------------------------
+(iii) send full string as query parameter and split it and then set in pojo class.
+
+BankResource
+ApplicationInitializer
+Cheque
+
+method:-cheque
+
+http://localhost:9000/21.JavaAutomaticParamterConversionInRest/rest/bank/fullCheckDetails?cheque=123-ifsc3434
+--------------------------------------------------------------------------------------------------------------------
+(iv)Automatic type conversion by using valueOf method
+
+BankResource
+ApplicationInitializer
+ChequeOne
+
+method:-chequeDatails
+
+http://localhost:9000/21.JavaAutomaticParamterConversionInRest/rest/bank/chequeDetails?cheque=123-ifsc123
+---------------------------------------------------------------------------------------------------------------------
+(v) Automatic conversion by using "single string argument constractor".
+
+BankResource
+ApplicationInitializer
+ChequeTwo
+
+Method:-getCheckClearenceStatus
+
+http://localhost:9000/21.JavaAutomaticParamterConversionInRest/rest/bank/chequeinfo?cheque=123-ifsc123
+
+Note:-If we use default constructor with parameterized constructor then it will not work.
+-----------------------------------------------------------------------------------------------------------------------
+(vi) Automatic type conversion by using List,Set
+
+BankResource
+ApplicationInitializer
+ChequeTwo
+
+method:-getAllClearenceStatus
+
+http://localhost:9000/21.JavaAutomaticParamterConversionInRest/rest/bank/allChequeStatus?cheque=123-ifsc123&cheque=124-ifsc124

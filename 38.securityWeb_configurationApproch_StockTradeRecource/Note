@@ -1,0 +1,54 @@
+(1) Authentication
+(2) Authorization
+(3) Message-level security(encryption)   (Not in rest)
+
+			(or)
+  	Data production
+(4)	Integrity(Digital singnature)        (Not in rest)
+(5)	Transport-level security(TSL)(HTTPS)	
+
+_______________________________________________________________________________________________
+step 1
+------
+First start the server.
+
+D:\Shriman_ webservices\shriman_CD\disc2\Software\jboss-as-7.1.1.Final\bin>stand
+alone.bat
+
+step 2
+-------
+D:\Shriman_ webservices\shriman_CD\disc2\Software\jboss-as-7.1.1.Final\bin>add-u
+ser.bat
+
+
+What type of user do you wish to add?
+ a) Management User (mgmt-users.properties)
+ b) Application User (application-users.properties)
+(a): b
+
+Enter the details of the new user to add.
+Realm (ApplicationRealm) : 
+Username : shailu
+Password : welcome1
+Re-enter Password : welcome1
+What roles do you want this user to belong to? (Please enter a comma separated l
+ist, or leave blank for none) : yes
+About to add user 'shailu' for realm 'admin'
+Is this correct yes/no? yes
+Added user 'devendra' to file 'D:\Shriman_ webservices\shriman_CD\disc2\Software
+\jboss-as-7.1.1.Final\standalone\configuration\application-users.properties'
+Added user 'devendra' to file 'D:\Shriman_ webservices\shriman_CD\disc2\Software
+\jboss-as-7.1.1.Final\domain\configuration\application-users.properties'
+Added user 'devendra' with roles yes to file 'D:\Shriman_ webservices\shriman_CD
+\disc2\Software\jboss-as-7.1.1.Final\standalone\configuration\application-roles.
+properties'
+Added user 'shailu' with roles yes to file 'D:\Shriman_ webservices\shriman_CD
+\disc2\Software\jboss-as-7.1.1.Final\domain\configuration\application-roles.prop
+erties'
+Press any key to continue . . .
+
+
+Send the request
+----------------
+http://localhost:9000/38.securityWeb_configurationApproch_StockTradeRecource/rest/stock/price/silver
+

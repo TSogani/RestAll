@@ -1,0 +1,31 @@
+Caching:-
+--------
+http://localhost:9000/43.Caching_OrderResource/rest/order/status/silver
+
+
+http://localhost:9000/43.Caching_OrderResource/rest/order/price/silver123
+
+
+note:-check with using braking point.
+_________________________________________________________________________
+
+Note:- Http 1.0 
+       expires header
+       
+       Http 2.0
+       expires header ----> Deprecated
+       cache-control  ----> Introduced
+       
+Value for cache-control
+------------------------
+
+	   (1)no-store
+	   (2)no-cache
+	   (3)private
+	   (4)max-age
+	   (5)smax-age
+	   (6)must-revalidate
+	   (7)no-transform
+       
+       Note:-we can add multiple value with saparate with comma ;
+       

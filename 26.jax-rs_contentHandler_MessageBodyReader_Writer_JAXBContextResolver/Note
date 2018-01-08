@@ -1,0 +1,30 @@
+Question:- Why ContextResolver comes into picture?
+---------
+Answer:-If we make MessageBodyReader and MessageBodyWriter as singleton
+		then MessageBodyReader and MessageBodyWriter will become singlton
+		but On Every request JAXBContext object are creating so that's
+		the problem that's why ContextResolver came into picture.
+		
+		In Reader and Writer class , JAXBContext object is created too
+		much (On every request) so killing performance. So ContextResolver
+		comes into picture comes into picture.
+		
+		ContextResolver will make JAXBContext as singleton.
+ARC:-
+		
+http://localhost:8001/26.jax-rs_contentHandler_MessageBodyReader_Writer_JAXBContextResolver/rest/idea/recharge
+
+content-type:-application/xml
+
+RequestBody:-
+------------
+<?xml version="1.0" encoding="utf-8"?>
+<subscriber>
+	<mobile>9090909090</mobile>
+    <plan>199</plan>
+    <amount>199</amount>
+</subscriber>
+___________________________________________________________________________		
+Note:-In RestEasy they already has provided MessageBodyReader and 
+	  MessageBodyWriter. RestEasy have JAXBConversion logic.
+___________________________________________________________________________

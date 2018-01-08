@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>/28.jax-rs_contentHandler_without_MessageBodyReader_Writer_POJO-mapping_jersey</display-name>
+  <servlet>
+  	<servlet-name>jersey</servlet-name>
+  	<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+  	<!-- auto scan -->
+  	<init-param>
+  		<param-name>jersey.config.server.provider.packages</param-name>
+  		<param-value>com.ch.resource</param-value>
+  	</init-param>
+
+  	<!-- we want auto-scan sub-package also -->
+  	<init-param>
+  		<param-name>jersey.config.server.provider.scanning.recursive</param-name>
+  		<param-value>true</param-value>
+  	</init-param>
+   <!-- the following is only needed if you want to use the built-in support
+        for mapping pojo objects to json. -->
+  	<init-param>
+            <param-name>com.sun.jersey.api.json.POJOMappingFeature</param-name>
+            <param-value>true</param-value>
+     </init-param>
+  	<load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>jersey</servlet-name>
+  	<url-pattern>/rest/*</url-pattern>
+  </servlet-mapping>
+</web-app>

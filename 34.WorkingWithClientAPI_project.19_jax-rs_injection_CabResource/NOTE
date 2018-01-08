@@ -1,0 +1,35 @@
+Program:1 send header and cookies as part of client request.
+____________________________________________________________
+
+http://localhost:8001/19.jax-rs_injection/rest/cab-management/trips
+
+Invoker
+CabResourceInvoker
+CabResourceClientTest
+
+method:- bookCab(At client side(in CabResourceInvoker))
+
+
+
+Question:-How do you read body more then one time?
+Answer:-By using response.bufferEntity()
+
+Question:-Why bufferEntity() method came into picture?
+Answer:-when we read response body directly by using readEntity(),
+        then we can read only once so if we try to read second time
+        then InputStream will close that's why we can not read more
+        then once.
+             If we want to read response body more then once then we should
+        use bufferEntity().
+             After that we can read response body any number of time.
+        That's why bufferEntity() came into picture.     
+_______________________________________________________________________________
+
+Program:2  Send form(with key,value pair) parameter as part of client.
+
+Invoker
+CabResourceInvokerClient
+CabResourceClientTest
+ 
+method:-bookCabForm(client side(in ResourceInvoker))
+

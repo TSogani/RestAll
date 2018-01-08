@@ -1,0 +1,23 @@
+Note:-Template Parameter will subsitute at runtime when request will got.
+
+
+IConnectResource
+----------------
+
+http://localhost:8001/15.workingWithUriAndParameter_PathParameter_annotation/rest/icici-netbanking/12345
+
+
+its also called template parameter
+
+IConnectResource1
+------------------
+
+http://localhost:8001/15.workingWithUriAndParameter_PathParameter_annotation/rest/icici-netbanking/12345/balance
+
+
+
+
+PostalResource
+----------------
+
+http://localhost:8001/15.workingWithUriAndParameter_PathParameter_annotation/rest/postal/sikandra

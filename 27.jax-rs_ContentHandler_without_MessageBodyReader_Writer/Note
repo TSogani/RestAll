@@ -1,0 +1,33 @@
+In RestEasy already provided MessageBodyReader and MessageBodyWriter.
+RestEasy have JAXB conversion logic.
+-------------------------------------------------------------------
+Program:-Send xml and getBack xml.
+--------
+RequestBody:-
+-----------
+<?xml version="1.0" encoding="utf-8"?>
+<subscriber>
+	<mobile>9090909090</mobile>
+    <plan>199</plan>
+    <amount>199</amount>
+</subscriber>
+
+http://localhost:9000/27.jax-rs_ContentHandler_without_MessageBodyReader_Writer/rest/idea/recharge
+
+--------------------------------------------------------------------
+
+Program:-Send JSON and getBack JSON
+-------
+
+RequestBody:-
+-----------
+{
+  "mobile":"895988778899",
+  "plan":"199-plan",
+  "amount":"199"
+}
+
+content-type:-application/json
+
+http://localhost:9000/27.jax-rs_ContentHandler_without_MessageBodyReader_Writer/rest/idea/recharge
+

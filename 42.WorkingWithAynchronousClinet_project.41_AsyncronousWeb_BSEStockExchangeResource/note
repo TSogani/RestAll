@@ -1,0 +1,13 @@
+Future<Response> future = client.target(BSE_STOCK_EXCHANGE_ROOT_URI).path("price").path("{stockName}").resolveTemplate("stockName", stockName).request().async().get();
+							|
+Future<Response> future = client.target(BSE_STOCK_EXCHANGE_ROOT_URI).path("price").path("{stockName}").resolveTemplate("stockName", stockName).request().async().get();
+                            |
+Future<Response> future = client.target(BSE_STOCK_EXCHANGE_ROOT_URI).path("price").path("{stockName}").resolveTemplate("stockName", stockName).request().async().get();
+                            |
+                            |
+                            |
+                            |
+        we can send n no of request in syncronous manner.
+                            
+                            
+                                                        							

@@ -1,0 +1,9 @@
+Question:-Why Invoker?
+Answer:-
+        Resource side:-
+                       resource->service->DAO
+        Client side :-
+                       jsp->controller->service->Invoker
+                       
+Make invoker as singlton
+

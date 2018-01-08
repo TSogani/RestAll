@@ -1,0 +1,83 @@
+use:-
+Step 1
+-------
+@RolesAllowed on class-level and method level, for which role we want to access the resource and method.
+
+Step 2
+-------
+web.xml
+--------
+<context-param>
+      <param-name>resteasy.role.based.security</param-name>
+      <param-value>true</param-value>
+</context-param>
+
+	|---------------------------|
+	|Note:-It's VENDOR specific.|
+	|---------------------------|
+This is for identification the annotation to the runtime.
+
+---------------------------------------------------
+
+@PermitAll
+
+this annotation we are using for permission for all roles.
+
+-----------------------------------------------------------------------------------------------------------------------
+_______________________________________________________________________________________________________________________
+Program 1.
+----------
+username:-shailu
+password:-welcome1
+
+method:-getStockPrice
+
+Note:-only admin can access this.
+
+http://localhost:9000/40.securityWeb_annotation-drivern_Approch_StockTradeResource/rest/stock/price
+
+xml:-
+---
+<?xml version="1.0" encoding="utf-8"?>
+<buy-order>
+  <customerId>1</customerId>
+  <stockName>shipla</stockName>
+  <quantity>2</quantity>
+  <exchange>bse</exchange>
+</buy-order>
+
+
+____________________________
+program 2.
+---------
+userName=mashu
+password=welcome2
+
+Note:-only trader can access this.
+----
+
+method:-getCustomerId
+
+http://localhost:9000/40.securityWeb_annotation-drivern_Approch_StockTradeResource/rest/stock/getcustomerid
+
+xml:-
+---
+<?xml version="1.0" encoding="utf-8"?>
+<buy-order>
+  <customerId>1</customerId>
+  <stockName>shipla</stockName>
+  <quantity>2</quantity>
+  <exchange>bse</exchange>
+</buy-order>
+
+_____________________________________
+program 3:
+
+Note:-Any role access this but in this program firstly we should remove @RolesAllowed from class level.
+
+method:-getOpeningTime
+
+http://localhost:9000/40.securityWeb_annotation-drivern_Approch_StockTradeResource/rest/stock/openingtime
+
+
+

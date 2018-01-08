@@ -1,0 +1,50 @@
+working with Exception
+-----------------------
+program.1 Send xml from the client and if requirment is not match the
+         send the Exception to the client.
+         
+ApplicationInitializer
+CardAgent
+CardAlreadyIssuedException
+method:-apply
+
+
+http://localhost:8001/30.WorkingWithException/rest/card/apply/icici/1
+
+RequestBody:-
+-----------
+<?xml version="1.0" encoding="utf-8"?>
+<user>
+  <firstName>shailu</firstName>
+  <lastName>yogi</lastName>
+  <gender>male</gender>
+</user>
+
+Note:- it will throw exception directly to client.so it is not recommneded.
+___________________________________________________________________________
+
+program.2 send the xml to client and get back result to client.
+----------
+ApplicationInitializer
+CardAgent
+CardAlreadyIssuedException
+
+method:-applyCardWithBetterExceptionManagement
+
+http://localhost:8001/30.WorkingWithException/rest/card/apply-card/icici/1
+
+RequestBody:-
+------------
+<?xml version="1.0" encoding="utf-8"?>
+<user>
+  <firstName>shailu</firstName>
+  <lastName>yogi</lastName>
+  <gender>male</gender>
+</user>
+
+Note:-Problem with this approch is, if we will throw the Exception with
+      Servler Response with ServlerError method then on every Resource
+      it will become duplicate code if all resouce will throw same exception.
+      So overcome to that problem,jax-rs has provided ExceptionMapper.
+      
+_______________________________________________________________________________

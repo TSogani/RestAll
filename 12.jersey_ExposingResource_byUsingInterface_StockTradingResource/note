@@ -1,0 +1,5 @@
+we can write only one implementation class of this interface.(which we want to 
+expose on network as an resource)
+
+
+http://localhost:8001/12.jersey_ExposingResource_byUsingInterface_StockTradingResource/resource/stocktrade?stockName=rajnigandha&market=bigbazar

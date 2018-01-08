@@ -1,0 +1,4 @@
+Question:-why do you need of custom parameter conversion?
+answer:-If class has wrote by someone then how to inject value.that's why
+		custom parameter conversion is needed.
+

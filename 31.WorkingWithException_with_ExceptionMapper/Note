@@ -1,0 +1,19 @@
+program:- Send xml and get back xml
+
+http://localhost:8001/31.WorkingWithException_with_ExceptionMapper/rest/card/apply/icici/1
+
+RequestBody:-
+-----------
+<?xml version="1.0" encoding="utf-8"?>
+<user>
+  <firstName>shailu</firstName>
+  <lastName>yogi</lastName>
+  <gender>male</gender>
+</user>
+
+After occured the Exception we will get 
+---------------------------------------
+
+500: Internal Server Error
+
+<error><error-code>098</error-code><error-message>Card already issued</error-message></error>

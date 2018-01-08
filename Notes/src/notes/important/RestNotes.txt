@@ -1,0 +1,65 @@
+@Context
+--------
+@Context is used to inject some api object into Resource class.
+
+(1) UriInfo
+    
+	Note:-For access all the uri
+
+(2) HttpHeaders
+	
+	Note:- For access all the header
+
+(3) Providers
+	
+	Note:-when we want to create the object of ContextResolver in MessageBodyReader.
+
+(4) SecurityContext
+	
+	Note:-When we want programmatic-approch for security.
+
+(5) Request
+        
+        Note:-servler side cacheing.
+
+@Provider
+----------
+
+(1) ParamConverterProvider
+(2) MessageBodyReader
+(3) MessageBodyWriter
+(4) ContextResolver
+(5) ExceptionMapper
+
+________________________________________________________
+!@sys*&
+
+
+
+problems:-
+-----------
+22.WorkingWithCustomParameterConvertor
+
+	toString method of ChequeParamConvertor is not working.
+
+	check these with getCheckDetails Method
+
+
+23.jax-rs_contentHandler_RequestBody
+	
+	method newOrder
+		
+	/new/chars
+	
+	Not working in resteasy
+24.jax-rs_contentHandler_ResponseBody
+	
+	method newOrderFurniture
+	
+	/new/out/orderfurniture
+
+28.jax-rs_contentHandler_without_MessageBodyReader_Writer_POJO-mapping_jersey
+	
+	json is not supporting in jersey
+
+_________________________________________________

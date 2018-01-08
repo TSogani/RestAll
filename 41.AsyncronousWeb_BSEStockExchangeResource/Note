@@ -1,0 +1,15 @@
+1)aysyncronous communication and asyscronous programming are different.
+
+2)asyncronous communication and asyncronous resource are difference.
+
+3)HTTP support only syncronous communication.
+
+4) HttpServletDispatcher(syncronous)(till 2.5 servlet version)
+
+5) HttpServlet30Dispatcher(asyncronous)(3.0 servlet version)
+
+6) we will use a AsyncResponse by using @Suspended annotation.
+         AsyncResponse is a response handler class.
+
+Note:-In aysncronous resource we use a saparate thread to execute and send back the response.
+

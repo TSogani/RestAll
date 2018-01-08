@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="40.securityWeb_annotation-drivern_Approch_StockTradeResource">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="40.securityWeb_annotation-drivern_Approch_StockTradeResource"/>
+        <property name="java-output-path" value="/40.securityWeb_annotation-drivern_Approch_StockTradeResource/build/classes"/>
+    </wb-module>
+</project-modules>

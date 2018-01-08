@@ -1,0 +1,39 @@
+Note:-Jax-rs 1.0 has not supported client api so thired party has
+      provided so many api for client.
+      
+      But RestEasy has supported.
+      
+      jax-rs 2.0 has supported client api.
+      
+      Client Object is represent pool of connection.
+________________________________________________________________
+
+Question:-When will Connection object will create at client side?
+Answer:-When request().get() method will be called at time
+        it will pick the connnection from connection pool.
+        
+_______________________________________________________________
+
+Client:- Connection
+WebTarget:-URI,PP,MP,QP
+Request:-Header,Body    
+
+______________________________________________________________________
+
+Note:-Never write full path uri of SubResource.InsteadOf it declare constant 
+      of RootURI
+Program 1. 
+__________
+
+client:-
+--------
+DTDCCorioutClient
+
+Resource:-
+---------
+projectName:-10.jersey_dtdcCourier_checkFrieghtCharges_sixthWayOfBootstrapping_no-web.xml
+
+CourierResource
+
+________________________________________________________________________________________________
+

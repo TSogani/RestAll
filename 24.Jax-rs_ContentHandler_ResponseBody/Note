@@ -1,0 +1,47 @@
+ContentHandler for response body
+__________________________________
+write the data in responsebody
+___________________________________________________________________________________________________
+program 1.
+----------
+Requirement:-take the data from String and return the data in byte[] to runtime.
+		
+OrderResource
+ApplicationInitializer
+method:-newOrder
+
+http://localhost:8001/24.Jax-rs_ContentHandler_ResponseBody/rest/order/new/out/bytes
+___________________________________________________________________________________________________
+program 2.
+----------
+Requirement:-Read the data as String and return as String.
+
+OrderResource
+ApplicationInitializer
+method:-newOrderFruit
+
+http://localhost:8001/24.Jax-rs_ContentHandler_ResponseBody/rest/order/new/out/string
+____________________________________________________________________________________________________
+program 3.
+----------
+Requirement:-Read the data from string and send back as char[] array to runtime
+
+
+OrderResource
+ApplicationInitializer
+method:-newOrderFurniture
+
+http://localhost:8001/24.Jax-rs_ContentHandler_ResponseBody/rest/order/new/out/orderfurniture
+_____________________________________________________________________________________________________
+program 4.
+----------
+Requirement:-read data from String and send back to runtime as file.
+
+OrderResource
+ApplicationInitializer
+method:-newFileOrder
+
+http://localhost:8001/24.Jax-rs_ContentHandler_ResponseBody/rest/order/new/out/orderfile
+
+RequestBody:-write any data
+_____________________________________________________________________________________________________

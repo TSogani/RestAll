@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="26.jax-rs_contentHandler_MessageBodyReader_Writer_JAXBContextResolver">
+        <wb-resource deploy-path="/" source-path="/WebContent" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <property name="context-root" value="26.jax-rs_contentHandler_MessageBodyReader_Writer_JAXBContextResolver"/>
+        <property name="java-output-path" value="/26.jax-rs_contentHandler_MessageBodyReader_Writer_JAXBContextResolver/build/classes"/>
+    </wb-module>
+</project-modules>

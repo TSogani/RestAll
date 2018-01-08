@@ -1,0 +1,11 @@
+when we want to access some additional information then we use matrix parameter
+
+1st way:-
+http://localhost:8001/16.workingWithUriAndParameter_matrixParameter_annotation/rest/car-agent/search/honda/pulser;year=2012?color=red&price=90900
+
+2nd way:-
+http://localhost:8001/16.workingWithUriAndParameter_matrixParameter_annotation/rest/car-agent/search/honda/pulser;year=2012;year=2011?color=red&price=90900
+response:-
+make:honda model:pulser color:red price:90900 year:2012
+
+note :-if we send two matrix paramter then replace will not happan for same matrix parameter,it take only first matrix parameter value.

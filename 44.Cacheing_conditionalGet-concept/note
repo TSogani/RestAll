@@ -1,0 +1,35 @@
+step 1
+------
+http://localhost:9000/44.Cacheing_conditionalGet-concept/rest/courier/book-parsel
+
+<?xml version="1.0" encoding="utf-8"?>
+<courier>
+  	<source>pune</source>
+  	<destination>jaipur</destination>
+  	<quantity>2</quantity>
+</courier>
+
+
+step 2
+-------
+      step:(a) Copy the output of first step 1 and then
+
+			http://localhost:9000/44.Cacheing_conditionalGet-concept/rest/courier/status/41ae1115-3beb-47c1-8dad-ca870e971a12
+		
+	 step:(b) put a header "Etag" and and copy the value which is return by server to client.And the put Etag value in value of Etag header.
+	         then again send the request.
+
+Note:-check with breakpoint
+	         
+step 3
+-------	          	
+	http://localhost:9000/44.Cacheing_conditionalGet-concept/rest/courier/update
+
+xml:-
+	
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<status>
+  <awbno>dba52739-e4b5-49a7-86b1-a69d8eaad47e</awbno>
+  <type>Express</type>
+  <status>Accepted</status>
+</status>

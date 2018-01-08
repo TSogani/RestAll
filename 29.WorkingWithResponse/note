@@ -1,0 +1,68 @@
+Requirement:-Make a response and send back to runtime.
+_________________________________________________________________________
+Question:-why do you need Response object?
+
+Answer:-If we want to customize default status code and we don't
+		want to show what is happening at server side then we use
+		Response object.
+
+Note:-Never return byte[],Char[],OutputStreaming,String..etc
+	  Return only Response object.
+	  
+	  All people in industries are using to return Response object only. 
+_________________________________________________________________________
+
+program:1 Make a simple response and return it to runtime.
+---------
+ApplicationInitializer
+Matrimony
+
+http://localhost:8001/29.WorkingWithResponse/rest/matrimony/profile/123
+____________________________________________________________________
+program:2 Take xml from clint and send back to xml.
+---------
+note:-In this program i used Response with create() method status bcoz i am creating
+	  a new profile so i used created() method for build the ResponseBuilder 
+	  object.
+	  
+step:1 send xml as part of request
+	  
+	  http://localhost:9000/29.WorkingWithResponse/rest/matrimony/new-profile
+	  
+RequestBody:-
+-----------
+<?xml version="1.0" encoding="utf-8"?>
+<user>
+  <firstName>shailu</firstName>
+  <lastName>yogi</lastName>
+  <gender>male</gender>
+</user>
+
+step:2 Resource will send the unique URI so we have to click on that and then we can check that our
+	   profile is exist or not.
+	   
+	   
+	   This URI will send by Resource as part of response.
+	   
+	   http://localhost:9000/29.WorkingWithResponse/rest/matrimony/profile/9ff0a3db-62ff-47f1-9fce-a6be16702352
+	   
+	   
+___________________________________________________________________________________________________________________
+program:-Sending the cookies and header as part of Response.
+
+MatrimonyResource
+ApplicationInitializer
+newRoyalProfile
+
+http://localhost:9000/29.WorkingWithResponse/rest/matrimony/new-royal-profile
+
+RequestBody:-
+------------
+<?xml version="1.0" encoding="utf-8"?>
+<user>
+  <firstName>shailu</firstName>
+  <lastName>yogi</lastName>
+  <gender>male</gender>
+</user>
+
+Note:-See the header and cookies in ARC.

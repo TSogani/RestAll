@@ -1,0 +1,128 @@
+1.program
+---------
+Integer value injection
+
+BankResource
+ApplicationInitializer
+
+note:-HttpServletContainer will get the value in String format and inject 
+      the value in integer format.
+
+
+http://localhost:8001/19.jax-rs_injection/rest/bank/balance/1122/saving
+
+
+-------------------------------------------------------------------------------------------------------------
+2.program
+---------
+
+(i)working with PathSegment
+
+	BigBasketResource
+	ApplicationInitializer
+
+	http://localhost:8001/19.jax-rs_injection/rest/bigbasket/search/itc;quantity=1;category=gloceries/surfexel;quantity=2?category=royal
+	
+	InterviewQuestion:-
+	(a)How to access dynamic matrix parameter?
+	(b)How to access matrix parameter atteched to specific path of uri?
+	
+	
+(ii)working with defaultValue
+	BigBasketResource
+	ApplicationInializer
+	
+	http://localhost:8001/19.jax-rs_injection/rest/bigbasket/care?city=jaipur
+	output:-city : jaipur 1800-202-888
+	
+	http://localhost:8001/19.jax-rs_injection/rest/bigbasket/care
+	output:-city : mumbai 1800-202-888
+	
+-------------------------------------------------------------------------------------------------------------
+program.3
+---------
+Requirement:-
+(i)	I want to access all the PathSegment of an uri. 
+(ii)I want to access all matrix parameters that are sent as part of uri
+(iii) I want to access all query parameters of an uri.
+
+Answer:-UriInfo class
+
+Note:- I used @Context annotation so runtime will inject UriInfo class object to resource class at runtime. 
+
+TexiResource
+ApplicationInitializer
+
+http://localhost:8001/19.jax-rs_injection/rest/texi;category=sedan/mumbai;place=charchgate?capacity=4&driver=men
+
+----------------------------------------------------------------------------------------------------------------
+program.4
+---------
+(i)Requirement:-I want to access some data from Header
+
+CabResource
+ApplicationInitializer
+
+method:- accept method
+
+http://localhost:8001/19.jax-rs_injection/rest/cab-management/accept/116
+
+header:-cabId=123
+
+(ii)Requirement:-I want to access some data from cookie.
+
+CabResource
+ApplicationInitializer
+
+method:-createCookies
+		getTrips
+	
+	process:-first send the request to /cookie path then send the request to /trips.	
+	
+	http://localhost:8001/19.jax-rs_injection/rest/cab-management/cookies
+	
+	http://localhost:8001/19.jax-rs_injection/rest/cab-management/trips
+	
+
+(iii) Requirement:-(a) I want to read all header in request.
+				   (b) I want to read all cookies in request.
+
+
+CabResource
+ApplicationInitializer
+
+method:-getTrips(HttpHeader)
+
+http://localhost:8001/19.jax-rs_injection/rest/cab-management/dynamictrips
+
+Header:-cabId=0116
+		driverName=puransingh
+		owner=devendra
+		
+(iv) Requirement:-access all the form paramater and value
+	@FormParam
+	
+CabResource
+ApplicationInitializer
+
+method-bookCab
+
+http://localhost:8001/19.jax-rs_injection/bookcab.jsp
+			
+---------------------------------------------------------------------------------
+program.5
+----------
+Requirement:-Inject value in pojo class.
+
+@BeanParam
+
+CricketInfoResource
+ApplicationInitializer
+Match
+
+method:-getScore
+
+http://localhost:8001/19.jax-rs_injection/rest/crick/T20/score;date=12-12-2016/india/australia;innings=first?over=12.2&playerName=kohli
+
+
+

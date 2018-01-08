@@ -1,0 +1,105 @@
+Jax-rs Content handler(content negociation)
+-------------------------------------------
+Note:-We cannot take two InputStream as method parameter bcoz one request
+	  have only one body.
+___________________________________________________________________
+1.program
+----------
+Requirement:-Pass any charcter and send back to client as same.
+			 Read data from InputStream.
+
+OrderResource
+ApplicationInitializer
+method:-newOrder
+
+ARC:-content-type=text/plain
+
+http://localhost:9000/23.Jax-rs_ContentHandler_RequestBody/rest/order/new/in
+
+RequestBody:-pass any data
+____________________________________________________________________
+2.program
+----------
+Requirement:- Pass any charcter and send back to client as same.
+              Read data from Reader.
+
+OrderResource
+ApplicationInitializer
+method:-newOrder
+
+ARC:- content-type=text/plain
+
+http://localhost:9000/23.Jax-rs_ContentHandler_RequestBody/rest/order/new/reader
+
+RequestBody:-pass any data
+
+Note:-we can use it for localization(Locale)
+______________________________________________________________________
+program 3
+---------
+Requeriment:-Read data from byte[]
+
+OrderResource
+ApplicationInitializer
+method:-newOrder
+
+http://localhost:9000/23.Jax-rs_ContentHandler_RequestBody/rest/order/new/bytes
+
+RequestBody:-pass any data
+______________________________________________________________________
+program 4
+---------
+Requirement:-Read data from form by using MultiValued map
+
+OrderResource
+ApplicationInitializer
+method:-newOrder
+
+RequestBody:-click on form and set content-type "application/x-www-form-urlencoded"
+			 and send the value in Form
+
+http://localhost:9000/23.Jax-rs_ContentHandler_RequestBody/rest/order/new/form
+________________________________________________________________________
+program 5
+---------
+Requirement:-Read data from string
+
+OrderResource
+ApplicationInitializer
+method:-newOrder
+
+RequestBody:-pass any data
+
+http://localhost:9000/23.Jax-rs_ContentHandler_RequestBody/rest/order/new/string
+
+note:-when we want to read whole charcter.
+________________________________________________________________________
+program 6
+---------
+Requirement:-Read data from char[] array
+
+OrderResource
+ApplicationInitializer
+method:-newOrder
+
+RequestBody:-pass any data
+
+http://localhost:9000/23.Jax-rs_ContentHandler_RequestBody/rest/order/new/chars
+
+note:-when we want to read partialy charcter.
+_______________________________________________________________________
+program 7
+---------
+Requirement:-Read data from file.
+
+OrderResource
+ApplicationInitializer
+method:-newBulkOrder
+
+RequestBody:-upload the file
+
+http://localhost:8001/23.Jax-rs_ContentHandler_RequestBody/rest/order/new/file
+
+Note:-File mediatype is multipart bcoz we can send multiple file and along 
+	  with that we can send xml and any data as part of request body.
+________________________________________________________________________

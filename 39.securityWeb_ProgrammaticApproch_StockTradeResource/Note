@@ -1,0 +1,24 @@
+http://localhost:9000/39.securityWeb_ProgrammaticApproch_StockTradeResource/rest/stock/price
+---------------------------------
+username:-shailu
+password:-welcome1
+---------------------------
+<?xml version="1.0" encoding="utf-8"?>
+<buy-order>
+  <customerId>1</customerId>
+  <stockName>shipla</stockName>
+  <quantity>2</quantity>
+  <exchange>bse</exchange>
+</buy-order>
+
+after that send:-
+-----------------
+Note:-Send xml with customerId 2
+
+<?xml version="1.0" encoding="utf-8"?>
+<buy-order>
+  <customerId>2</customerId>
+  <stockName>shipla</stockName>
+  <quantity>2</quantity>
+  <exchange>bse</exchange>
+</buy-order>
